@@ -354,42 +354,12 @@ Solusi:
 - Pastikan folder storage sudah dibuat
 - Jalankan: mkdir storage
 
-**3. Port sudah digunakan**
-```
-Error: listen EADDRINUSE :::3000
-```
-Solusi: 
-- Ganti PORT di .env (misal: 3001)
-- Atau stop aplikasi yang menggunakan port 3000
-- Cari process: lsof -i :3000 (Mac/Linux) atau netstat -ano | findstr :3000 (Windows)
-
-**4. Module not found**
+**3. Module not found**
 ```
 Error: Cannot find module 'express'
 ```
 Solusi: 
 - Install ulang dependencies: npm install
-
----
-
-## Catatan Tambahan
-
-PENTING: Aplikasi ini dijalankan secara lokal terlebih dahulu untuk testing, kemudian di-deploy ke Railway menggunakan DATABASE_PUBLIC_URL dari PostgreSQL plugin.
-
-Tips:
-- Selalu test di lokal sebelum deploy
-- Backup database secara berkala
-- Monitor usage di Railway dashboard
-- Dokumentasikan setiap perubahan
-
----
-
-## Referensi
-
-- Railway Documentation: https://docs.railway.app/
-- PostgreSQL Documentation: https://www.postgresql.org/docs/
-- Express.js Guide: https://expressjs.com/
-- Node.js Best Practices: https://github.com/goldbergyoni/nodebestpractices
 
 ---
 
