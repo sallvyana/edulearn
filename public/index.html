@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduLearn Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #f00;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    form {
+      background: #111;
+      border: 2px solid #f00;
+      border-radius: 10px;
+      padding: 20px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0 15px #f00;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #f00;
+      border-radius: 6px;
+      background: #000;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 20px;
+      background: #f00;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: bold;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #900;
+      transform: scale(1.03);
+    }
+
+    a {
+      color: #f00;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 500px) {
+      form {
+        width: 100%;
+        padding: 15px;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      input, button {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>EduLearn PTS</h1>
+
+  <form action="/add" method="POST" enctype="multipart/form-data">
+    <label>Nama:</label>
+    <input type="text" name="name" placeholder="Masukkan nama lengkap" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" placeholder="Masukkan email aktif" required>
+
+    <label>Upload Foto / File:</label>
+    <input type="file" name="file" accept="image/*" required>
+
+    <button type="submit">💾 Simpan & Upload</button>
+  </form>
+
+  <a href="/users">📋 Lihat Data Pengguna</a>
+</body>
+</html>
